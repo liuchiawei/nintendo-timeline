@@ -1,7 +1,6 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 
 interface TimelineEntry {
   time: string;
