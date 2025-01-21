@@ -37,15 +37,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="flex justify-start pt-10 md:pt-20 md:gap-10"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-20 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
+              <div className="h-10 absolute left-3 top-2 w-10 rounded-full bg-background flex items-center justify-center">
                 <div className="h-4 w-4 rounded-full bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 p-2" />
               </div>
               {/* {Desktop Time Section TODO: Delete after testing} */}
-              <div className="hidden md:block md:pl-20">
-                <h3 className="text-xl md:text-6xl font-bold text-gray-500 dark:text-gray-400">
+              <div className="hidden md:block pl-20">
+                <h3 className="text-6xl text-gray-200 dark:text-gray-700">
                   {item.time}
                 </h3>
-                <p className="mt-10 text-xl font-normal text-gray-500 dark:text-gray-400">
+                <p className="mt-10 text-md font-normal text-gray-700 dark:text-gray-400">
                   {item.content}
                 </p>
               </div>
@@ -81,7 +81,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-red-400 via-rose-600 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>
