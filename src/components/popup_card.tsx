@@ -28,7 +28,7 @@ export default function PopupCard({
         <CardBody className="flex flex-col items-center justify-center">
           <motion.div
             variants={cardVariants}
-            className="border w-[240px] h-[180px] md:w-[400px] md:h-[300px] flex flex-col items-center justify-center origin-[10%_60%]"
+            className="w-[240px] h-[180px] md:w-[400px] md:h-[300px] flex flex-col items-center justify-center origin-[10%_60%]"
           >
             <CardItem translateZ={50}>
               <Image
@@ -76,7 +76,6 @@ const cardVariants: Variants = {
  */
 
 const cardContainer: React.CSSProperties = {
-  border: "1px solid blue",
   width: "100%",
   maxWidth: "500px",
   height: 450,

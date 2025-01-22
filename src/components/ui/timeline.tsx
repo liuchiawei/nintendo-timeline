@@ -43,7 +43,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-20 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 top-2 w-10 rounded-full bg-background flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-gray-200 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 p-2" />
+                <div className="h-4 w-4 rounded-full bg-gray-200 dark:bg-gray-800 p-2" />
               </div>
               {/* {Desktop Time Section TODO: Delete after testing} */}
               <div className="hidden md:block pl-20">
@@ -69,7 +69,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </p>
                 <div className="flex flex-col gap-4">
                   {/* TODO: Scroll Card Frame*/}
-                  <div className="rounded-lg object-cover h-[500px] md:h-[600px] w-full border flex flex-col items-center justify-center gap-3">
+                  <div className="rounded-lg object-cover h-[500px] md:h-[600px] w-full flex flex-col items-center justify-center gap-3">
                     <PopupCard
                       url={item.url}
                       title={item.title}
