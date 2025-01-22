@@ -117,7 +117,7 @@ export default function Home() {
         subtitle="クロニクル"
         description="Nintendo Chronology"
       />
-      <div className="max-w-7xl mx-auto py-20 flex flex-col justify-center items-center">
+      <div className="max-w-7xl mx-auto py-20 flex flex-col justify-center items-center px-4">
         <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-black dark:text-white max-w-4xl">
           任天堂の軌跡
         </h2>
