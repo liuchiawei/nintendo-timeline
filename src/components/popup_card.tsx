@@ -2,18 +2,34 @@ import * as motion from "motion/react-client";
 import type { Variants } from "motion/react";
 import Image from "next/image";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
+import ReactCardFlip from "react-card-flip";
+import { useState } from "react";
 
 export default function PopupCard({
   url,
   title,
   subtitle,
+  topgame,
+  topgame_url,
+  topgame_solds,
 }: {
   url: string;
   title: string;
   subtitle: string;
+  topgame: string;
+  topgame_url: string;
+  topgame_solds: number | string;
 }) {
   const hue = (h: number) => `hsl(${h}, 100%, 50%)`;
   const background = `linear-gradient(306deg, ${hue(340)}, ${hue(10)})`;
+  const [isFlipped, setIsFlipped] = useState(false);
+  /** 
+    @function handleFlip
+    @description: カードを裏返す関数
+  */
+  const handleFlip = () => {
+    setIsFlipped((prev) => !prev);
+  };
 
   return (
     <motion.div
@@ -25,30 +41,55 @@ export default function PopupCard({
     >
       <div style={{ ...splash, background }} />
       <CardContainer>
-        <CardBody className="flex flex-col items-center justify-center">
+        <CardBody className="flex flex-col items-center justify-center cursor-pointer">
           <motion.div
             variants={cardVariants}
             className="w-[240px] h-[180px] md:w-[400px] md:h-[300px] flex flex-col items-center justify-center origin-[10%_60%]"
           >
-            <CardItem translateZ={50}>
-              <Image
-                src={url}
-                alt={title}
-                width={500}
-                height={300}
-                objectFit="cover"
-              />
-            </CardItem>
-            <CardItem translateZ={80}>
-              <h3 className="text-white text-md md:text-xl text-center font-normal drop-shadow">
-                {subtitle}
-              </h3>
-            </CardItem>
-            <CardItem translateZ={100}>
-              <h3 className="text-white text-2xl md:text-4xl text-center font-bold drop-shadow-md">
-                {title}
-              </h3>
-            </CardItem>
+            <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+              <div
+                className="w-[240px] h-[180px] md:w-[400px] md:h-[300px] flex flex-col items-center justify-center origin-[10%_60%]"
+                onClick={handleFlip}
+              >
+                <CardItem translateZ={50}>
+                  <Image
+                    src={url}
+                    alt={title}
+                    width={500}
+                    height={300}
+                    objectFit="cover"
+                  />
+                </CardItem>
+                <CardItem translateZ={80}>
+                  <h3 className="text-white text-md md:text-xl text-center font-normal drop-shadow">
+                    {subtitle}
+                  </h3>
+                </CardItem>
+                <CardItem translateZ={100}>
+                  <h3 className="text-white text-2xl md:text-4xl text-center font-bold drop-shadow-md">
+                    {title}
+                  </h3>
+                </CardItem>
+              </div>
+              <div
+                className={`w-[240px] h-[180px] md:w-[400px] md:h-[300px] flex flex-col items-center justify-around origin-[10%_60%] transition-all duration-100 rounded-3xl bg-gray-500 shadow-lg ${
+                  isFlipped ? "" : "opacity-0"
+                }`}
+                style={{ background: `url(${topgame_url})` }}
+                onClick={handleFlip}
+              >
+                <CardItem translateZ={50}>
+                  <h3 className="text-white text-md md:text-2xl text-center font-normal drop-shadow bg-cover bg-center bg-no-repeat">
+                    {topgame}
+                  </h3>
+                </CardItem>
+                <CardItem translateZ={100}>
+                  <h1 className="text-white text-2xl md:text-6xl text-center font-bold drop-shadow-lg">
+                    {topgame_solds}
+                  </h1>
+                </CardItem>
+              </div>
+            </ReactCardFlip>
           </motion.div>
         </CardBody>
       </CardContainer>

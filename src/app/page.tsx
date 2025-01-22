@@ -9,6 +9,9 @@ export default function Home() {
     subtitle: string;
     url: string;
     solds: number | string;
+    topgame: string;
+    topgame_url: string;
+    topgame_solds: number | string;
   }[] = [
     {
       time: "1983",
@@ -18,6 +21,9 @@ export default function Home() {
       subtitle: "Famicom",
       url: "/images/famicom.png",
       solds: 6191,
+      topgame: "スーパーマリオブラザーズ",
+      topgame_url: "/images/splatoon2.webp",
+      topgame_solds: 4024,
     },
     {
       time: "1990",
@@ -27,6 +33,9 @@ export default function Home() {
       subtitle: "Super Famicom",
       url: "/images/super_famicom.png",
       solds: 4910,
+      topgame: "スーパーマリオワールド",
+      topgame_url: "/images/splatoon2.webp",
+      topgame_solds: 2061,
     },
     {
       time: "1996",
@@ -36,6 +45,9 @@ export default function Home() {
       subtitle: "Nintendo 64",
       url: "/images/n64.png",
       solds: 3293,
+      topgame: "スーパーマリオ64",
+      topgame_url: "/images/splatoon2.webp",
+      topgame_solds: 1191,
     },
     {
       time: "2001",
@@ -45,6 +57,9 @@ export default function Home() {
       subtitle: "GameCube",
       url: "/images/game_cube.png",
       solds: 2174,
+      topgame: "大乱闘スマッシュブラザーズDX",
+      topgame_url: "/images/splatoon2.webp",
+      topgame_solds: 738,
     },
     {
       time: "2006",
@@ -54,6 +69,9 @@ export default function Home() {
       subtitle: "Wii",
       url: "/images/wii.webp",
       solds: 10163,
+      topgame: "Wii Sports",
+      topgame_url: "/images/wii_sports.webp",
+      topgame_solds: 8287,
     },
     {
       time: "2012",
@@ -63,6 +81,9 @@ export default function Home() {
       subtitle: "Wii U",
       url: "/images/wii_u.webp",
       solds: 1356,
+      topgame: "マリオカート8",
+      topgame_url: "/images/splatoon2.webp",
+      topgame_solds: 846,
     },
     {
       time: "2017",
@@ -72,6 +93,9 @@ export default function Home() {
       subtitle: "スイッチ",
       url: "/images/switch.png",
       solds: 14604,
+      topgame: "マリオカート8 デラックス",
+      topgame_url: "/images/splatoon2.webp",
+      topgame_solds: 6427,
     },
     {
       time: "2025",
@@ -81,6 +105,9 @@ export default function Home() {
       subtitle: "スイッチ2",
       url: "/images/switch2.webp",
       solds: "???",
+      topgame: "coming soon",
+      topgame_url: "/images/splatoon2.webp",
+      topgame_solds: "???",
     },
   ];
   return (
