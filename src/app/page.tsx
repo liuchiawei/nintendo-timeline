@@ -117,13 +117,15 @@ export default function Home() {
         subtitle="クロニクル"
         description="Nintendo Chronology"
       />
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-8 text-black dark:text-white max-w-4xl">
-          任天堂の軌跡：ゲーム機の進化を辿る旅へ
+      <div className="max-w-7xl mx-auto py-20 flex flex-col justify-center items-center">
+        <h2 className="text-xl md:text-6xl font-bold mb-4 text-black dark:text-white max-w-4xl">
+          任天堂の軌跡
         </h2>
-        <p className="text-gray-800 dark:text-gray-300 text-sm md:text-base max-w-sm leading-10">
+        <h3 className="text-base md:text-2xl mb-8 text-black dark:text-white max-w-4xl">
+          ゲーム機の進化を辿る旅へ
+        </h3>
+        <p className="text-gray-800 dark:text-gray-300 text-sm md:text-base max-w-sm leading-10 text-justify">
           任天堂が2025年に「Nintendo Switch 2」を発売することを発表しましたね。
-          任天堂ホームページ
           このサイトでは、初代ファミリーコンピュータから最新機種まで、任天堂の歴代ゲーム機の進化と革新の歴史を詳しく紹介します。各ハードウェアの特徴や発売当時のエピソード、代表的なゲームタイトルなどを網羅し、任天堂ファンやゲーム愛好者にとって貴重な情報源となることを目指しています。
         </p>
       </div>
