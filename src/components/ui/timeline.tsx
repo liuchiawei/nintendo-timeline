@@ -2,7 +2,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import PopupCard from "@/components/popup_card";
-
+import AnimatedCounter from "@/components/animated_counter";
 interface TimelineEntry {
   time: string;
   content: string;
@@ -64,11 +64,19 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </p>
                 <div className="flex flex-col gap-4">
                   {/* TODO: Scroll Card Frame*/}
-                  <div className="rounded-lg object-cover h-svh lg:h-[700px] w-full border flex flex-col items-center justify-center">
-                    <PopupCard url={item.url} title={item.title} subtitle={item.subtitle} />
-                    <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg text-center font-normal mb-4">
-                      {item.title}
+                  <div className="rounded-lg object-cover h-svh lg:h-[700px] w-full border flex flex-col items-center justify-center gap-3">
+                    <PopupCard
+                      url={item.url}
+                      title={item.title}
+                      subtitle={item.subtitle}
+                    />
+                    <h3 className="text-md md:text-xl text-center">
+                      売上台数
                     </h3>
+                    <div className="flex justify-center items-end gap-1">
+                      <AnimatedCounter value={100} className="text-3xl md:text-6xl font-bold" />
+                    <h3 className="text-md md:text-xl">万台</h3>
+                    </div>
                   </div>
                 </div>
               </div>
