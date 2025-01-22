@@ -75,9 +75,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                       title={item.title}
                       subtitle={item.subtitle}
                     />
-                    <h3 className="text-md md:text-xl text-center">
-                      売上台数
-                    </h3>
+                    <h3 className="text-md md:text-xl text-center">売上台数</h3>
                     <div className="flex justify-center items-end gap-2">
                       <AnimatedCounter
                         value={item.solds}
