@@ -22,7 +22,7 @@ export default function Home() {
       url: "/images/famicom.png",
       solds: 6191,
       topgame: "スーパーマリオブラザーズ",
-      topgame_url: "/images/splatoon2.webp",
+      topgame_url: "/images/games/super_mario_bros.png",
       topgame_solds: 4024,
     },
     {
@@ -34,7 +34,7 @@ export default function Home() {
       url: "/images/super_famicom.png",
       solds: 4910,
       topgame: "スーパーマリオワールド",
-      topgame_url: "/images/splatoon2.webp",
+      topgame_url: "/images/games/super_mario_world.jpg",
       topgame_solds: 2061,
     },
     {
@@ -46,7 +46,7 @@ export default function Home() {
       url: "/images/n64.png",
       solds: 3293,
       topgame: "スーパーマリオ64",
-      topgame_url: "/images/splatoon2.webp",
+      topgame_url: "/images/games/super_mario_64.jpg",
       topgame_solds: 1191,
     },
     {
@@ -58,7 +58,7 @@ export default function Home() {
       url: "/images/game_cube.png",
       solds: 2174,
       topgame: "大乱闘スマッシュブラザーズDX",
-      topgame_url: "/images/splatoon2.webp",
+      topgame_url: "/images/games/super_smash_bros_dx.webp",
       topgame_solds: 738,
     },
     {
@@ -70,7 +70,7 @@ export default function Home() {
       url: "/images/wii.webp",
       solds: 10163,
       topgame: "Wii Sports",
-      topgame_url: "/images/wii_sports.webp",
+      topgame_url: "/images/games/wii_sports.webp",
       topgame_solds: 8287,
     },
     {
@@ -82,7 +82,7 @@ export default function Home() {
       url: "/images/wii_u.webp",
       solds: 1356,
       topgame: "マリオカート8",
-      topgame_url: "/images/splatoon2.webp",
+      topgame_url: "/images/games/mario_kart_8.jpg",
       topgame_solds: 846,
     },
     {
@@ -94,7 +94,7 @@ export default function Home() {
       url: "/images/switch.png",
       solds: 14604,
       topgame: "マリオカート8 デラックス",
-      topgame_url: "/images/splatoon2.webp",
+      topgame_url: "/images/games/mario_kart_8_dx.webp",
       topgame_solds: 6427,
     },
     {

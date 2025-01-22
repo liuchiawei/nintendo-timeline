@@ -72,20 +72,27 @@ export default function PopupCard({
                 </CardItem>
               </div>
               <div
-                className={`w-[240px] h-[180px] md:w-[400px] md:h-[300px] flex flex-col items-center justify-around origin-[10%_60%] transition-all duration-100 rounded-3xl bg-gray-500 shadow-lg ${
+                className={`w-[240px] h-[180px] md:w-[400px] md:h-[300px] flex flex-col items-center justify-center origin-[10%_60%] transition-all duration-100 rounded-3xl bg-gray-500 shadow-lg select-none ${
                   isFlipped ? "" : "opacity-0"
                 }`}
-                style={{ background: `url(${topgame_url})` }}
+                style={{
+                  background: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url(${topgame_url})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                  backgroundBlendMode: "darken",
+                }}
                 onClick={handleFlip}
               >
                 <CardItem translateZ={50}>
-                  <h3 className="text-white text-md md:text-2xl text-center font-normal drop-shadow bg-cover bg-center bg-no-repeat">
+                  <h3 className="text-white text-md md:text-2xl text-center font-normal drop-shadow-lg">
                     {topgame}
                   </h3>
                 </CardItem>
-                <CardItem translateZ={100}>
+                <CardItem translateZ={120}>
                   <h1 className="text-white text-2xl md:text-6xl text-center font-bold drop-shadow-lg">
                     {topgame_solds}
+                    <span className="text-sm md:text-base text-normal"> 万本</span>
                   </h1>
                 </CardItem>
               </div>
