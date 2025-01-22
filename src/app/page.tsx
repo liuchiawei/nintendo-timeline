@@ -72,6 +72,15 @@ export default function Home() {
       url: "/images/switch.png",
       solds: 14604,
     },
+    {
+      time: "2025",
+      content:
+        "任天堂は2025年に次世代機「Nintendo Switch 2」を発売予定です。 本体は現行モデルよりも大型化し、画面サイズも拡大される見込みです。新しいJoy-Conは横から差し込むタイプに変更され、操作性の向上が期待されています。また、初代Switchのソフトもプレイ可能で、互換性が確保されています。",
+      title: "Switch 2",
+      subtitle: "スイッチ2",
+      url: "/images/switch.png",
+      solds: "???",
+    },
   ];
   return (
     <div className="w-full">

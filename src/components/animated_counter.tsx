@@ -63,12 +63,15 @@ export default function AnimatedCounter({
   value,
   className,
 }: {
-  value: number;
+  value: number | string;
   className?: string;
 }) {
+  if (typeof value === "string") {
+    return <div className={cn(className)}>{value}</div>;
+  }
   return (
     <div className={cn(className)}>
-      <Counter from={0} to={value} duration={1} />
+      <Counter from={0} to={Number(value)} duration={1} />
     </div>
   );
 }
