@@ -28,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.variable} ${notoSansJP.variable} antialiased`}>
+      <body
+        className={`${montserrat.variable} ${notoSansJP.variable} bg-dot-36-s-2-foreground/20 antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
