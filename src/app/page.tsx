@@ -118,10 +118,10 @@ export default function Home() {
         description="Nintendo Chronology"
       />
       <div className="max-w-7xl mx-auto py-20 flex flex-col justify-center items-center">
-        <h2 className="text-xl md:text-6xl font-bold mb-4 text-black dark:text-white max-w-4xl">
+        <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-black dark:text-white max-w-4xl">
           任天堂の軌跡
         </h2>
-        <h3 className="text-base md:text-2xl mb-8 text-black dark:text-white max-w-4xl">
+        <h3 className="text-base md:text-2xl mb-8 max-w-4xl">
           ゲーム機の進化を辿る旅へ
         </h3>
         <p className="text-gray-600 dark:text-gray-500 text-sm md:text-base max-w-sm text-justify">

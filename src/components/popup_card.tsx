@@ -33,7 +33,7 @@ export default function PopupCard({
 
   return (
     <motion.div
-      className="card-container cursor-pointer"
+      className="card-container"
       style={cardContainer}
       initial="offscreen"
       whileInView="onscreen"
@@ -63,7 +63,7 @@ export default function PopupCard({
                     className="cursor-pointer"
                   />
                 </CardItem>
-                <CardItem translateZ={50}>
+                <CardItem translateZ={80}>
                   <h3 className="text-white text-md md:text-xl text-center font-normal drop-shadow">
                     {subtitle}
                   </h3>
@@ -77,7 +77,7 @@ export default function PopupCard({
             </CardContainer>
             <CardContainer>
               <CardBody
-                className={`w-[240px] h-[180px] md:w-[400px] md:h-[300px] flex flex-col items-center justify-center origin-[10%_60%] transition-all duration-100 rounded-3xl bg-gray-600 shadow-lg overflow-hidden ${
+                className={`w-[240px] h-[210px] md:w-[400px] md:h-[350px] flex flex-col items-center justify-center origin-[10%_60%] transition-all duration-100 rounded-3xl bg-gray-600 shadow-lg ${
                   isFlipped ? "" : "opacity-0"
                 }`}
               >
@@ -93,12 +93,12 @@ export default function PopupCard({
                   }}
                 />
                 <CardItem translateZ={50}>
-                  <h3 className="text-gray-200 text-md md:text-2xl text-center font-normal drop-shadow-lg">
+                  <h3 className="text-gray-200 text-md md:text-2xl text-center font-normal drop-shadow">
                     {topgame}
                   </h3>
                 </CardItem>
                 <CardItem translateZ={120}>
-                  <h1 className="text-white text-2xl md:text-7xl text-center font-bold drop-shadow-lg">
+                  <h1 className="text-white text-2xl md:text-7xl text-center font-bold drop-shadow cursor-pointer">
                     {topgame_solds}
                     <span className="text-gray-200 text-sm md:text-base text-normal">
                       {" "}

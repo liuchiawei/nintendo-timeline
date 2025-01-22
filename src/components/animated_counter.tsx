@@ -71,7 +71,7 @@ export default function AnimatedCounter({
   }
   return (
     <div className={cn(className)}>
-      <Counter from={0} to={Number(value)} duration={1} />
+      <Counter from={0} to={Number(value)} duration={0.8} />
     </div>
   );
 }
