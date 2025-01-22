@@ -1,5 +1,6 @@
 import { HeaderLines } from "@/components/header_lines";
 import { Timeline } from "@/components/ui/timeline";
+import Footer from "@/components/footer";
 export default function Home() {
   const data: {
     time: string;
@@ -99,6 +100,7 @@ export default function Home() {
         </p>
       </div>
       <Timeline data={data} />
+      <Footer name="HAL東京" />
     </div>
   );
 }
