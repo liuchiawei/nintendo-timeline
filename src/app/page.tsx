@@ -94,7 +94,7 @@ export default function Home() {
         <h2 className="text-lg md:text-4xl mb-8 text-black dark:text-white max-w-4xl">
           任天堂の軌跡：ゲーム機の進化を辿る旅へ
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
+        <p className="text-gray-800 dark:text-gray-300 text-sm md:text-base max-w-sm leading-10">
           任天堂が2025年に「Nintendo Switch 2」を発売することを発表しましたね。
           任天堂ホームページ
           このサイトでは、初代ファミリーコンピュータから最新機種まで、任天堂の歴代ゲーム機の進化と革新の歴史を詳しく紹介します。各ハードウェアの特徴や発売当時のエピソード、代表的なゲームタイトルなどを網羅し、任天堂ファンやゲーム愛好者にとって貴重な情報源となることを目指しています。
