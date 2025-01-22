@@ -7,63 +7,70 @@ export default function Home() {
     title: string;
     subtitle: string;
     url: string;
+    solds: number;
   }[] = [
     {
       time: "1983",
-      content: "Deployed 5 new components on Aceternity today",
+      content:
+        "ファミリーコンピュータ、通称「ファミコン」として親しまれ、8ビットの性能で多くの名作ゲームが生まれました。家庭用ゲーム機の定番となり、日本中で大ヒットしました。",
       title: "ファミコン",
       subtitle: "Famicom",
       url: "/images/famicom.png",
+      solds: 6191,
     },
     {
       time: "1990",
       content:
-        "I usually run out of copy, but when I see content this big, I try to integrate lorem ipsum. Lorem ipsum is for people who are too lazy to write copy. But we are not. Here are some more example of beautiful designs I built.",
+        "16ビットに進化し、グラフィックや音質が大幅に向上。『スーパーマリオワールド』や『ゼルダの伝説』など、多くの名作が登場しました。",
       title: "スーパーファミコン",
       subtitle: "Super Famicom",
       url: "/images/super_famicom.png",
+      solds: 4910,
     },
     {
       time: "1996",
-      content: "Deployed 5 new components on Aceternity today",
+      content:
+        "64ビットの性能で、初の3Dゲーム体験を提供。『スーパーマリオ64』や『ゼルダの伝説 時のオカリナ』など、革新的な作品が生まれました。",
       title: "ニンテンドー64",
       subtitle: "Nintendo 64",
       url: "/images/n64.jpg",
+      solds: 3293,
     },
     {
-      time: "1993",
-      content: "Deployed 5 new components on Aceternity today",
+      time: "2001",
+      content:
+        "コンパクトなデザインと高性能を兼ね備え、8cmの光ディスクを採用。『大乱闘スマッシュブラザーズDX』などが人気を博しました",
       title: "ゲームクーバー",
       subtitle: "GameCube",
       url: "/images/game_cube.png",
+      solds: 2174,
     },
     {
-      time: "1995",
-      content: "Deployed 5 new components on Aceternity today",
+      time: "2006",
+      content:
+        "モーションコントロールを導入し、体感型ゲームを実現。『Wii Sports』は家族や友人と楽しめるゲームとして大ヒットしました。",
       title: "Wii",
       subtitle: "Wii",
       url: "/images/wii.webp",
+      solds: 10163,
     },
     {
-      time: "1996",
-      content: "Deployed 5 new components on Aceternity today",
+      time: "2012",
+      content:
+        "タブレット型コントローラー「Wii U GamePad」を採用し、テレビと手元画面のデュアルプレイが可能に。新しいゲーム体験を提供しました。",
       title: "Wii U",
       subtitle: "Wii U",
       url: "/images/wii_u.webp",
-    },
-    {
-      time: "2011",
-      content: "Deployed 5 new components on Aceternity today",
-      title: "Nintendo 3DS",
-      subtitle: "ニンテンドー3DS",
-      url: "/images/3ds.webp",
+      solds: 1356,
     },
     {
       time: "2017",
-      content: "Deployed 5 new components on Aceternity today",
+      content:
+        "据え置きと携帯のハイブリッド型ゲーム機。『ゼルダの伝説 ブレス オブ ザ ワイルド』や『スプラトゥーン2』など、多くの人気タイトルが登場し、現在も多くのユーザーに愛されています。",
       title: "Switch",
       subtitle: "スイッチ",
       url: "/images/switch.png",
+      solds: 14604,
     },
   ];
   return (

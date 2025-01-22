@@ -3,12 +3,14 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import PopupCard from "@/components/popup_card";
 import AnimatedCounter from "@/components/animated_counter";
+
 interface TimelineEntry {
   time: string;
   content: string;
   title: string;
   subtitle: string;
   url: string;
+  solds: number;
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -45,10 +47,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </div>
               {/* {Desktop Time Section TODO: Delete after testing} */}
               <div className="hidden md:block pl-20">
-                <h3 className="text-6xl text-gray-200 dark:text-gray-700">
+                <h3 className="text-7xl text-gray-200 dark:text-gray-800">
                   {item.time}
                 </h3>
-                <p className="mt-10 text-md font-normal text-gray-700 dark:text-gray-400">
+                <h3 className="my-4 text-lg font-bold text-gray-600 dark:text-gray-600">
+                  {item.title}
+                </h3>
+                <p className="text-md font-normal text-gray-600 dark:text-gray-500">
                   {item.content}
                 </p>
               </div>
@@ -64,7 +69,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </p>
                 <div className="flex flex-col gap-4">
                   {/* TODO: Scroll Card Frame*/}
-                  <div className="rounded-lg object-cover h-svh lg:h-[700px] w-full border flex flex-col items-center justify-center gap-3">
+                  <div className="rounded-lg object-cover h-[500px] md:h-[600px] w-full border flex flex-col items-center justify-center gap-3">
                     <PopupCard
                       url={item.url}
                       title={item.title}
@@ -73,9 +78,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                     <h3 className="text-md md:text-xl text-center">
                       売上台数
                     </h3>
-                    <div className="flex justify-center items-end gap-1">
-                      <AnimatedCounter value={100} className="text-3xl md:text-6xl font-bold" />
-                    <h3 className="text-md md:text-xl">万台</h3>
+                    <div className="flex justify-center items-end gap-2">
+                      <AnimatedCounter
+                        value={item.solds}
+                        className="text-4xl md:text-8xl font-bold"
+                      />
+                      <h3 className="text-md md:text-xl">万台</h3>
                     </div>
                   </div>
                 </div>
@@ -94,7 +102,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-red-400 via-rose-600 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-red-400 via-rose-700 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>
