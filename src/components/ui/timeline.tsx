@@ -10,7 +10,7 @@ interface TimelineEntry {
   title: string;
   subtitle: string;
   url: string;
-  solds: number;
+  solds: number | string;
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -102,7 +102,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-red-400 via-rose-700 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-red-400 via-red-700 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>

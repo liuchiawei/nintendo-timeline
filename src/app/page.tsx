@@ -7,7 +7,7 @@ export default function Home() {
     title: string;
     subtitle: string;
     url: string;
-    solds: number;
+    solds: number | string;
   }[] = [
     {
       time: "1983",
@@ -33,7 +33,7 @@ export default function Home() {
         "64ビットの性能で、初の3Dゲーム体験を提供。『スーパーマリオ64』や『ゼルダの伝説 時のオカリナ』など、革新的な作品が生まれました。",
       title: "ニンテンドー64",
       subtitle: "Nintendo 64",
-      url: "/images/n64.jpg",
+      url: "/images/n64.png",
       solds: 3293,
     },
     {
@@ -78,7 +78,7 @@ export default function Home() {
         "任天堂は2025年に次世代機「Nintendo Switch 2」を発売予定です。 本体は現行モデルよりも大型化し、画面サイズも拡大される見込みです。新しいJoy-Conは横から差し込むタイプに変更され、操作性の向上が期待されています。また、初代Switchのソフトもプレイ可能で、互換性が確保されています。",
       title: "Switch 2",
       subtitle: "スイッチ2",
-      url: "/images/switch.png",
+      url: "/images/switch2.webp",
       solds: "???",
     },
   ];
