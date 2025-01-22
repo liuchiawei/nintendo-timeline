@@ -1,11 +1,14 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import PopupCard from "@/components/popup_card";
 
 interface TimelineEntry {
   time: string;
   content: string;
   title: string;
+  subtitle: string;
+  url: string;
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -60,11 +63,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   {item.content}
                 </p>
                 <div className="flex flex-col gap-4">
-                  {/* TODO: Card Image */}
-                  <div className="rounded-lg object-cover h-20 md:h-40 lg:h-[700px] w-full bg-gray-200 dark:bg-gray-700" />
-                  <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg text-center font-normal mb-4">
-                    {item.title}
-                  </h3>
+                  {/* TODO: Scroll Card Frame*/}
+                  <div className="rounded-lg object-cover h-svh lg:h-[700px] w-full border flex flex-col items-center justify-center">
+                    <PopupCard url={item.url} title={item.title} subtitle={item.subtitle} />
+                    <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-lg text-center font-normal mb-4">
+                      {item.title}
+                    </h3>
+                  </div>
                 </div>
               </div>
             </div>

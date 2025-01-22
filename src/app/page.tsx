@@ -5,47 +5,65 @@ export default function Home() {
     time: string;
     content: string;
     title: string;
+    subtitle: string;
+    url: string;
   }[] = [
     {
       time: "1983",
       content: "Deployed 5 new components on Aceternity today",
-      title: "FC",
-    },
-    {
-      time: "1985",
-      content:
-        "I usually run out of copy, but when I see content this big, I try to integrate lorem ipsum. Lorem ipsum is for people who are too lazy to write copy. But we are not. Here are some more example of beautiful designs I built.",
-      title: "Game & Watch",
+      title: "ファミコン",
+      subtitle: "Famicom",
+      url: "/images/famicom.png",
     },
     {
       time: "1990",
-      content: "Deployed 5 new components on Aceternity today",
-      title: "Game & Watch",
-    },
-    {
-      time: "1993",
-      content: "Deployed 5 new components on Aceternity today",
-      title: "Game Boy",
-    },
-    {
-      time: "1995",
-      content: "Deployed 5 new components on Aceternity today",
-      title: "Super Famicom",
+      content:
+        "I usually run out of copy, but when I see content this big, I try to integrate lorem ipsum. Lorem ipsum is for people who are too lazy to write copy. But we are not. Here are some more example of beautiful designs I built.",
+      title: "スーパーファミコン",
+      subtitle: "Super Famicom",
+      url: "/images/super_famicom.png",
     },
     {
       time: "1996",
       content: "Deployed 5 new components on Aceternity today",
-      title: "Super Famicom",
+      title: "ニンテンドー64",
+      subtitle: "Nintendo 64",
+      url: "/images/n64.jpg",
     },
     {
-      time: "1997",
+      time: "1993",
       content: "Deployed 5 new components on Aceternity today",
-      title: "Super Famicom",
+      title: "ゲームクーバー",
+      subtitle: "GameCube",
+      url: "/images/game_cube.png",
     },
     {
-      time: "1998",
+      time: "1995",
       content: "Deployed 5 new components on Aceternity today",
-      title: "Super Famicom",
+      title: "Wii",
+      subtitle: "Wii",
+      url: "/images/wii.webp",
+    },
+    {
+      time: "1996",
+      content: "Deployed 5 new components on Aceternity today",
+      title: "Wii U",
+      subtitle: "Wii U",
+      url: "/images/wii_u.webp",
+    },
+    {
+      time: "2011",
+      content: "Deployed 5 new components on Aceternity today",
+      title: "Nintendo 3DS",
+      subtitle: "ニンテンドー3DS",
+      url: "/images/3ds.webp",
+    },
+    {
+      time: "2017",
+      content: "Deployed 5 new components on Aceternity today",
+      title: "Switch",
+      subtitle: "スイッチ",
+      url: "/images/switch.png",
     },
   ];
   return (
