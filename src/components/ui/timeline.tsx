@@ -47,10 +47,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </div>
               {/* {Desktop Time Section TODO: Delete after testing} */}
               <div className="hidden md:block pl-20">
-                <h3 className="text-7xl text-gray-200 dark:text-gray-800">
+                <h3 className="text-7xl text-gray-200 dark:text-gray-600">
                   {item.time}
                 </h3>
-                <h3 className="my-4 text-lg font-bold text-gray-600 dark:text-gray-600">
+                <h3 className="my-4 text-lg font-bold dark:font-normal text-gray-600 dark:text-gray-300">
                   {item.title}
                 </h3>
                 <p className="text-md font-normal text-gray-600 dark:text-gray-500">
