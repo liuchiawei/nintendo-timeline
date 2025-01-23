@@ -73,7 +73,7 @@ export default function PopupCard({
                     </Tooltip>
                   </CardItem>
                   <CardItem translateZ={80}>
-                    <h3 className="text-white text-md md:text-xl text-center font-normal drop-shadow cursor-pointer">
+                    <h3 className="text-white text-md md:text-xl text-center font-normal drop-shadow-sm cursor-pointer">
                       {subtitle}
                     </h3>
                   </CardItem>
@@ -103,12 +103,12 @@ export default function PopupCard({
                   }}
                 />
                 <CardItem translateZ={50}>
-                  <h3 className="text-neutral-200 text-md md:text-2xl text-center font-normal drop-shadow cursor-pointer">
+                  <h3 className="text-neutral-200 text-md md:text-2xl text-center font-normal drop-shadow-sm cursor-pointer">
                     {topgame}
                   </h3>
                 </CardItem>
                 <CardItem translateZ={120}>
-                  <h1 className="text-white text-2xl md:text-7xl text-center font-bold drop-shadow cursor-pointer">
+                  <h1 className="text-white text-2xl md:text-7xl text-center font-bold drop-shadow-sm cursor-pointer">
                     {topgame_solds}
                     <span className="text-neutral-200 text-sm md:text-base text-normal">
                       {" "}
