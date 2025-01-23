@@ -2,6 +2,7 @@ import { useState } from "react";
 import * as motion from "motion/react-client";
 import type { Variants } from "motion/react";
 import ReactCardFlip from "react-card-flip";
+import { TooltipProvider, Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import Image from "next/image";
 
@@ -51,30 +52,39 @@ export default function PopupCard({
             flipDirection="horizontal"
             cardZIndex="50"
           >
-            <CardContainer>
-              <CardBody className="w-[240px] h-[180px] md:w-[400px] md:h-[300px] flex flex-col items-center justify-center origin-[10%_60%]">
-                <CardItem translateZ={20}>
-                  <Image
-                    src={url}
-                    alt={title}
-                    width={500}
-                    height={300}
-                    objectFit="cover"
-                    className="cursor-pointer"
-                  />
-                </CardItem>
-                <CardItem translateZ={80}>
-                  <h3 className="text-white text-md md:text-xl text-center font-normal drop-shadow">
-                    {subtitle}
-                  </h3>
-                </CardItem>
-                <CardItem translateZ={100}>
-                  <h1 className="text-white text-2xl md:text-4xl text-center font-bold drop-shadow-md">
-                    {title}
-                  </h1>
-                </CardItem>
-              </CardBody>
-            </CardContainer>
+            <TooltipProvider>
+              <CardContainer>
+                <CardBody className="w-[240px] h-[180px] md:w-[400px] md:h-[300px] flex flex-col items-center justify-center origin-[10%_60%]">
+                  <CardItem translateZ={20}>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Image
+                          src={url}
+                          alt={title}
+                          width={500}
+                          height={300}
+                          objectFit="cover"
+                          className="cursor-pointer"
+                        />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>トップゲームはどれ？</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </CardItem>
+                  <CardItem translateZ={80}>
+                    <h3 className="text-white text-md md:text-xl text-center font-normal drop-shadow">
+                      {subtitle}
+                    </h3>
+                  </CardItem>
+                  <CardItem translateZ={100}>
+                    <h1 className="text-white text-2xl md:text-4xl text-center font-bold drop-shadow-md">
+                      {title}
+                    </h1>
+                  </CardItem>
+                </CardBody>
+              </CardContainer>
+            </TooltipProvider>
             <CardContainer>
               <CardBody
                 className={`w-[240px] h-[210px] md:w-[400px] md:h-[350px] flex flex-col items-center justify-center origin-[10%_60%] transition-all duration-100 rounded-3xl bg-gray-600 shadow-lg ${
