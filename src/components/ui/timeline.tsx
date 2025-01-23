@@ -3,7 +3,7 @@ import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 import PopupCard from "@/components/popup_card";
 import AnimatedCounter from "@/components/animated_counter";
-
+import StickyComponent from "@/components/sticky_component";
 interface TimelineEntry {
   time: string;
   content: string;
@@ -49,25 +49,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             key={index}
             className="flex justify-start pt-10 md:pt-20 md:gap-10"
           >
-            <div className="sticky top-20 flex flex-col md:flex-row z-40 items-center self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 absolute left-3 top-2 w-10 rounded-full bg-background flex items-center justify-center">
-                <div className="h-4 w-4 rounded-full bg-gray-200 dark:bg-gray-800 p-2" />
-              </div>
-              {/* {Desktop Time Section TODO: Delete after testing} */}
-              <div className="hidden md:block pl-20">
-                <h3 className="text-7xl text-gray-200 dark:text-gray-600">
-                  {item.time}
-                </h3>
-                <h3 className="my-4 text-lg font-bold dark:font-normal text-gray-600 dark:text-gray-300">
-                  {item.title}
-                </h3>
-                <p className="text-md font-normal text-gray-600 dark:text-gray-500">
-                  {item.content}
-                </p>
-              </div>
-            </div>
+            {/* {TODO: change color when sticky} */}
+            <StickyComponent time={item.time} title={item.title} content={item.content} />
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              {/* {Mobile Time Section TODO: Delete after testing} */}
+              {/* Mobile Time Section */}
               <h3 className="md:hidden block text-4xl mb-4 text-left font-bold text-gray-500 dark:text-gray-400">
                 {item.time}
               </h3>
@@ -76,7 +61,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   {item.content}
                 </p>
                 <div className="flex flex-col gap-4">
-                  {/* TODO: Scroll Card Frame*/}
+                  {/* Scroll Card Frame*/}
                   <div className="rounded-lg object-cover h-[500px] md:h-[600px] w-full flex flex-col items-center justify-center gap-3">
                     <PopupCard
                       url={item.url}
