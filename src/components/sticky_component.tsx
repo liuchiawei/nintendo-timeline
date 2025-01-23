@@ -22,7 +22,7 @@ const StickyComponent = ({ time, title, content }: StickyComponentProps) => {
       <div className="h-10 absolute left-3 top-2 w-10 rounded-full bg-background flex items-center justify-center">
         <div
           className={`h-4 w-4 rounded-full p-2 transition-all duration-500 ${
-            inView ? "bg-accent dark:bg-accent" : "bg-gray-200 dark:bg-gray-800"
+            inView ? "bg-accent dark:bg-accent" : "bg-neutral-200 dark:bg-neutral-800"
           }`}
         />
       </div>
@@ -31,15 +31,15 @@ const StickyComponent = ({ time, title, content }: StickyComponentProps) => {
           className={`text-7xl transition-all duration-500 ${
             inView
               ? "text-accent dark:text-accent"
-              : "text-gray-200 dark:text-gray-800"
+              : "text-neutral-200 dark:text-neutral-800"
           }`}
         >
           {time}
         </h3>
-        <h3 className="my-4 text-lg font-bold dark:font-normal text-gray-600 dark:text-gray-300">
+        <h3 className="my-4 text-lg font-bold dark:font-normal text-neutral-600 dark:text-neutral-300">
           {title}
         </h3>
-        <p className="text-md font-normal text-gray-600 dark:text-gray-500">
+        <p className="text-md font-normal text-neutral-600 dark:text-neutral-500">
           {content}
         </p>
       </div>
