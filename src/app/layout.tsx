@@ -17,8 +17,8 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "Nintendo Timeline | 任天堂の歴史",
-  description: "任天堂の歴史",
+  title: "Nintendo Chronology | 任天堂クロニクル",
+  description: "From 8-bit to Next-Gen: The Evolution of Nintendo",
 };
 
 export default function RootLayout({
