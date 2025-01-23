@@ -52,7 +52,7 @@ export default function PopupCard({
             flipDirection="horizontal"
             cardZIndex="50"
           >
-            <TooltipProvider>
+            <TooltipProvider delayDuration={200}>
               <CardContainer>
                 <CardBody className="w-[240px] h-[180px] md:w-[400px] md:h-[300px] flex flex-col items-center justify-center origin-[10%_60%]">
                   <CardItem translateZ={20}>
