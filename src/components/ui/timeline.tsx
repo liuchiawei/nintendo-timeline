@@ -1,6 +1,7 @@
 "use client";
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 import PopupCard from "@/components/popup_card";
 import AnimatedCounter from "@/components/animated_counter";
 import StickyComponent from "@/components/sticky_component";
@@ -20,6 +21,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (ref.current) {
@@ -49,7 +51,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             key={index}
             className="flex justify-start pt-10 md:pt-20 md:gap-10"
           >
-            <StickyComponent time={item.time} title={item.title} content={item.content} />
+            {isMobile && (
+              <StickyComponent
+                time={item.time}
+                title={item.title}
+                content={item.content}
+              />
+            )}
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
               {/* Mobile Time Section */}
               <h3 className="md:hidden block text-4xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-400">
