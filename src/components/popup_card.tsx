@@ -1,9 +1,9 @@
+import { useState } from "react";
 import * as motion from "motion/react-client";
 import type { Variants } from "motion/react";
-import Image from "next/image";
-import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import ReactCardFlip from "react-card-flip";
-import { useState } from "react";
+import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
+import Image from "next/image";
 
 export default function PopupCard({
   url,
