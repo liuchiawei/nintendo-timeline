@@ -1,7 +1,6 @@
 "use client";
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
-import { useIsMobile } from "@/hooks/use-mobile";
 import PopupCard from "@/components/popup_card";
 import AnimatedCounter from "@/components/animated_counter";
 import StickyComponent from "@/components/sticky_component";
