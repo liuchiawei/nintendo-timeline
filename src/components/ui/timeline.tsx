@@ -49,7 +49,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             key={index}
             className="flex justify-start pt-10 md:pt-20 md:gap-10"
           >
-            {/* {TODO: change color when sticky} */}
             <StickyComponent time={item.time} title={item.title} content={item.content} />
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
               {/* Mobile Time Section */}
