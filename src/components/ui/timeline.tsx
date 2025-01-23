@@ -1,5 +1,5 @@
 "use client";
-import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import PopupCard from "@/components/popup_card";
 import AnimatedCounter from "@/components/animated_counter";
@@ -33,16 +33,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     offset: ["start 10%", "end 50%"],
   });
 
-  const heightTransform: MotionValue<number> = useTransform(
+  const heightTransform = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, height]
+    ["0px", `${height}px`]
   );
-  const opacityTransform: MotionValue<number> = useTransform(
-    scrollYProgress,
-    [0, 0.1],
-    [0, 1]
-  );
+
+  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
     <div className="w-full md:px-10" ref={containerRef}>
