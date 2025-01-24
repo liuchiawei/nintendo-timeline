@@ -1,7 +1,9 @@
 import { HeaderLines } from "@/components/header_lines";
 import { Timeline } from "@/components/ui/timeline";
 import Footer from "@/components/footer";
+// i18n next-intl language switcher
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { gameConsoles } from "@/data/gameConsoles";
 
 type ConsoleKey =
@@ -14,7 +16,14 @@ type ConsoleKey =
   | "Switch"
   | "Switch2";
 
-export default function Home() {
+export default function Home({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  // Enable static rendering
+  setRequestLocale(locale);
+
   const t = useTranslations("");
   const unit = t("Home.unit");
   const sales = t("Home.sales");
@@ -32,6 +41,7 @@ export default function Home() {
       topgame_solds: consoleItem.topgame_solds,
     };
   });
+
   return (
     <div className="w-full">
       <HeaderLines
@@ -46,16 +56,6 @@ export default function Home() {
         <h3 className="text-base md:text-2xl mb-8 max-w-4xl">
           {t("Home.intro_subtitle")}
         </h3>
-        {/* {t("Home.intro_description", { returnObjects: true }).map(
-          (desc: string, i: number) => (
-            <p
-              key={i}
-              className="text-neutral-600 dark:text-neutral-500 text-sm md:text-base max-w-sm text-justify"
-            >
-              {desc}
-            </p>
-          )
-        )} */}
         <p className="text-neutral-600 dark:text-neutral-500 text-sm md:text-base max-w-sm text-justify">
           {t("Home.intro_description.0")} <br />
           {t("Home.intro_description.1")} <br />

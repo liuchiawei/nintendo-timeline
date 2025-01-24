@@ -1,4 +1,12 @@
 {
+  "Metadata": {
+    "title": "任天堂編年史 | Nintendo Chronicle",
+    "description": "任天堂遊戲機的進化史"
+  },
+  "Error": {
+    "description": "<p>我們不幸地遇到了一個錯誤。</p><p>您可以嘗試<retry>重新加載頁面</retry>您正在訪問的頁面。</p>",
+    "title": "發生了一些問題！"
+  },
   "Home": {
     "title": "任天堂",
     "subtitle": "編年史",

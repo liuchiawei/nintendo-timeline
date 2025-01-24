@@ -1,4 +1,12 @@
 {
+  "Metadata": {
+    "title": "任天堂クロニクル | Nintendo Chronicle",
+    "description": "任天堂ゲーム機の進化史"
+  },
+  "Error": {
+    "description": "<p>エラーが発生しました。</p><p>ページを<retry>再読み込み</retry>してみてください。</p>",
+    "title": "エラーが発生しました！"
+  },
   "Home": {
     "title": "任天堂",
     "subtitle": "クロニクル",
