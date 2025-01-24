@@ -23,7 +23,7 @@ const StickyComponent = ({ time, title, content }: StickyComponentProps) => {
         <div
           className={`rounded-full transition-all duration-500 ${
             inView
-              ? "bg-background ring-4 p-1 ring-foreground dark:ring-neutral-300"
+              ? "bg-background ring-4 p-1 ring-foreground"
               : "p-2 bg-neutral-200 dark:bg-neutral-800"
           }`}
         />
@@ -32,7 +32,7 @@ const StickyComponent = ({ time, title, content }: StickyComponentProps) => {
         <h3
           className={`text-7xl transition-all duration-500 ${
             inView
-              ? "text-foreground dark:text-white"
+              ? "text-foreground"
               : "text-neutral-200 dark:text-neutral-800"
           }`}
         >
