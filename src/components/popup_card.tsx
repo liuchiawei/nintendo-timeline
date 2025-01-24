@@ -33,6 +33,7 @@ export default function PopupCard({
   };
 
   return (
+    <div className="flex flex-col items-center justify-center">
     <motion.div
       className="card-container"
       style={cardContainer}
@@ -63,7 +64,6 @@ export default function PopupCard({
                           alt={title}
                           width={500}
                           height={300}
-                          objectFit="cover"
                           className="cursor-pointer"
                         />
                       </TooltipTrigger>
@@ -121,7 +121,8 @@ export default function PopupCard({
           </ReactCardFlip>
         </motion.div>
       </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }
 

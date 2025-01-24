@@ -12,7 +12,7 @@ interface TimelineEntry {
   url: string;
   solds: number | string;
   topgame: string;
-  topgame_url: string;
+  topgame_url: string | null;
   topgame_solds: number | string;
 }
 
@@ -71,7 +71,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                       title={item.title}
                       subtitle={item.subtitle}
                       topgame={item.topgame}
-                      topgame_url={item.topgame_url}
+                      topgame_url={item.topgame_url ?? ""}
                       topgame_solds={item.topgame_solds}
                     />
                     <h3 className="text-md md:text-xl text-center">売上台数</h3>
