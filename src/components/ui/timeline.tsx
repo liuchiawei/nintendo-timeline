@@ -17,7 +17,15 @@ export interface TimelineEntry {
   topgame_solds: number | string;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({
+  data,
+  sales,
+  unit,
+}: {
+  data: TimelineEntry[];
+  sales: string;
+  unit: string;
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -75,13 +83,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                       topgame_url={item.topgame_url}
                       topgame_solds={item.topgame_solds}
                     />
-                    <h3 className="text-md md:text-xl text-center">売上台数</h3>
+                    <h3 className="text-md md:text-xl text-center">
+                      {sales}
+                    </h3>
                     <div className="flex justify-center items-end gap-2">
                       <AnimatedCounter
                         value={item.solds}
                         className="text-4xl md:text-8xl font-bold"
                       />
-                      <h3 className="text-md md:text-xl">万台</h3>
+                      <h3 className="text-md md:text-xl">{unit}</h3>
                     </div>
                   </div>
                 </div>
