@@ -4,7 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import PopupCard from "@/components/popup_card";
 import AnimatedCounter from "@/components/animated_counter";
 import StickyComponent from "@/components/sticky_component";
-interface TimelineEntry {
+
+export interface TimelineEntry {
   time: string;
   content: string;
   title: string;
@@ -47,7 +48,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-20 md:gap-10"
+            className="flex justify-start pt-none md:pt-20 md:gap-10"
           >
             <StickyComponent
               time={item.time}
