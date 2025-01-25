@@ -4,6 +4,14 @@ import React, { useEffect, useRef, useState } from "react";
 import PopupCard from "@/components/popup_card";
 import AnimatedCounter from "@/components/animated_counter";
 import StickyComponent from "@/components/sticky_component";
+import { Link, Element } from "react-scroll";
+import {
+  Tooltip,
+  TooltipProvider,
+  TooltipTrigger,
+  TooltipContent,
+} from "@/components/ui/tooltip";
+
 interface TimelineEntry {
   time: string;
   content: string;
@@ -19,8 +27,27 @@ interface TimelineEntry {
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
+  const [height, setHeight] = useState<number>(0);
 
+  // ナビゲーションバーの表示/非表示
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      // height of the Button to show: 1000px
+      if (window.scrollY > 1000) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    // cleanup function
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // 左のスクロールバーの高さを取得
   useEffect(() => {
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect();
@@ -44,10 +71,36 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   return (
     <div className="w-full md:px-10" ref={containerRef}>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+        <nav
+          className={`${
+            isVisible ? "opacity-100" : "opacity-0"
+          } fixed top-1/2 right-8 -translate-y-1/2 w-10 hidden md:flex flex-col items-center gap-4 z-50 bg-transparent transition-opacity duration-300`}
+        >
+          {data.map((item, index) => (
+            <TooltipProvider key={index}>
+              <Tooltip>
+                <Link
+                  to={index.toString()}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  className="size-3 rounded-full bg-foreground/20 hover:bg-foreground/70 transition-all duration-100 transform cursor-pointer"
+                  activeClass="scale-150 bg-accent"
+                >
+                  <TooltipTrigger className="w-full h-full cursor-pointer"></TooltipTrigger>
+                </Link>
+                <TooltipContent>
+                  <p>{item.time}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          ))}
+        </nav>
         {data.map((item, index) => (
-          <div
+          <Element
             key={index}
-            className="flex justify-start pt-10 md:pt-20 md:gap-10"
+            name={index.toString()} //Linkのtoと同じ
+            className="flex justify-start pt-8 md:pt-20 md:gap-10"
           >
             <StickyComponent
               time={item.time}
@@ -56,7 +109,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             />
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
               {/* Mobile Time Section */}
-              <h3 className="md:hidden block text-4xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-400">
+              <h3 className="md:hidden block text-4xl mb-4 text-left font-bold text-foreground">
                 {item.time}
               </h3>
               <div>
@@ -86,7 +139,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </Element>
         ))}
         <div
           style={{

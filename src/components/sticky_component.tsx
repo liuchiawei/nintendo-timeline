@@ -19,7 +19,7 @@ const StickyComponent = ({ time, title, content }: StickyComponentProps) => {
       ref={ref}
       className="sticky top-20 flex flex-col md:flex-row z-40 items-center self-start max-w-xs lg:max-w-sm md:w-full"
     >
-      <div className="h-10 absolute left-3 top-4 w-10 rounded-full bg-background flex items-center justify-center">
+      <div className="h-10 absolute left-3 top-7 w-10 rounded-full bg-background flex items-center justify-center">
         <div
           className={`rounded-full transition-all duration-500 ${
             inView
