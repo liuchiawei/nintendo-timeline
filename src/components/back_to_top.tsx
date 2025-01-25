@@ -31,7 +31,7 @@ export default function BackToTop() {
     <Button
       className={`${
         isVisible ? "opacity-100" : "opacity-0"
-      } fixed bottom-4 right-4 cursor-pointer transition-opacity duration-300`}
+      } fixed bottom-8 right-8 cursor-pointer transition-opacity duration-300`}
       onClick={handleClick}
     >
       <ArrowUp className="w-4 h-4" />
