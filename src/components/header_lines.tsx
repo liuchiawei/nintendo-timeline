@@ -1,5 +1,6 @@
 import React from "react";
 import { BackgroundLines } from "@/components/ui/background-lines";
+import ScrollDown from "@/components/scroll_down";
 
 export function HeaderLines({
   title,
@@ -18,6 +19,8 @@ export function HeaderLines({
       <p className="mt-4 max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
         {description}
       </p>
+      <ScrollDown />
     </BackgroundLines>
   );
 }
+
