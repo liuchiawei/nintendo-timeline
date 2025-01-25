@@ -77,17 +77,17 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           } fixed top-1/2 right-8 -translate-y-1/2 w-10 hidden md:flex flex-col items-center gap-4 z-50 bg-transparent transition-opacity duration-300`}
         >
           {data.map((item, index) => (
-            <TooltipProvider key={index}>
+            <TooltipProvider key={index} delayDuration={300}>
               <Tooltip>
                 <Link
                   to={index.toString()}
                   smooth={true}
                   duration={500}
                   spy={true}
-                  className="size-3 rounded-full bg-foreground/20 hover:bg-foreground/70 transition-all duration-100 transform cursor-pointer"
                   activeClass="scale-150 bg-accent"
+                  className="size-3 rounded-full bg-foreground/20 hover:bg-foreground/70 transition-all duration-100 transform cursor-pointer"
                 >
-                  <TooltipTrigger className="w-full h-full cursor-pointer"></TooltipTrigger>
+                  <TooltipTrigger className="w-full h-full cursor-pointer" />
                 </Link>
                 <TooltipContent>
                   <p>{item.time}</p>
