@@ -45,7 +45,9 @@ export default async function LocaleLayout({
   // Enable static rendering
   setRequestLocale(locale);
 
+  // get messages for the current locale
   const messages = await getMessages();
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
