@@ -18,6 +18,22 @@ type ConsoleKey =
 
 export default function Home() {
   const t = useTranslations("");
+  const unit = t("Home.unit");
+  const sales = t("Home.sales");
+  const data = gameConsoles.map((consoleItem) => {
+    const key = consoleItem.key as ConsoleKey;
+    return {
+      time: consoleItem.time,
+      content: t(`${key}.content`),
+      title: t(`${key}.title`),
+      subtitle: t(`${key}.subtitle`),
+      url: consoleItem.url,
+      solds: consoleItem.solds,
+      topgame: t(`${key}.topgame`),
+      topgame_url: consoleItem.topgame_url,
+      topgame_solds: consoleItem.topgame_solds,
+    };
+  });
   return (
     <div>
       <HeaderLines
@@ -41,7 +57,7 @@ export default function Home() {
         </p>
         <ScrollDown />
       </div>
-      <Timeline data={data} />
+      <Timeline data={data} sales={sales} unit={unit} />
       <Footer name="HAL東京 リュウチャーウェイ" />
       <BackToTop />
     </div>
