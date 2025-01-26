@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { Montserrat, Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme_provider";
-import ThemeToggle from "@/components/theme_toggle";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import Nav from "@/components/nav";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -25,6 +26,10 @@ export const metadata: Metadata = {
   description: "From 8-bit to Next-Gen: The Evolution of Nintendo",
 };
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function LocaleLayout({
   children,
   params: { locale },
@@ -36,8 +41,10 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as "en" | "ja" | "zh")) {
     notFound();
   }
-  // Providing all messages to the client
-  // side is the easiest way to get started
+  
+  // Enable static rendering
+  setRequestLocale(locale);
+
   const messages = await getMessages();
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -50,7 +57,7 @@ export default async function LocaleLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ThemeToggle />
+          <Nav />
           <NextIntlClientProvider messages={messages}>
             {children}
           </NextIntlClientProvider>

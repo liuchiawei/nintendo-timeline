@@ -2,9 +2,12 @@ import { HeaderLines } from "@/components/header_lines";
 import { Timeline } from "@/components/ui/timeline";
 import Footer from "@/components/footer";
 import BackToTop from "@/components/back_to_top";
-import { data } from "@/data/data";
+// import { data } from "@/data/data";
 import ScrollDown from "@/components/scroll_down";
 import { useTranslations } from "next-intl";
+import { gameConsoles } from "@/data/gameConsoles";
+import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
 type ConsoleKey =
   | "Famicom"
@@ -16,10 +19,16 @@ type ConsoleKey =
   | "Switch"
   | "Switch2";
 
-export default function Home() {
+export default function Home({ params: { locale } }: { params: { locale: string } }) {
+  // request locale must be set first before call useTranslations
+  setRequestLocale(locale);
+
   const t = useTranslations("");
+  const sold_title = t("Home.sold_title");
   const unit = t("Home.unit");
-  const sales = t("Home.sales");
+  const game_unit = t("Home.game_unit");
+  const hover_hint = t("Home.hover_hint");
+
   const data = gameConsoles.map((consoleItem) => {
     const key = consoleItem.key as ConsoleKey;
     return {
@@ -32,6 +41,7 @@ export default function Home() {
       topgame: t(`${key}.topgame`),
       topgame_url: consoleItem.topgame_url,
       topgame_solds: consoleItem.topgame_solds,
+      hover_hint: hover_hint,
     };
   });
   return (
@@ -57,9 +67,17 @@ export default function Home() {
         </p>
         <ScrollDown />
       </div>
-      <Timeline data={data} sales={sales} unit={unit} />
+      <Timeline data={data} sold_title={sold_title} unit={unit} game_unit={game_unit} hover_hint={hover_hint}/>
       <Footer name="HAL東京 リュウチャーウェイ" />
       <BackToTop />
     </div>
   );
+}
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: t("title"),
+  };
 }

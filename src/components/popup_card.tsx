@@ -13,13 +13,19 @@ export default function PopupCard({
   topgame,
   topgame_url,
   topgame_solds,
+  topgame_compact_unit,
+  game_unit, 
+  hover_hint,
 }: {
   url: string;
   title: string;
   subtitle: string;
   topgame: string;
   topgame_url: string;
-  topgame_solds: number | string;
+  topgame_solds: number;
+  topgame_compact_unit: string;
+  game_unit: string;
+  hover_hint: string;
 }) {
   const hue = (h: number) => `hsl(${h}, 100%, 50%)`;
   const background = `linear-gradient(306deg, ${hue(340)}, ${hue(10)})`;
@@ -68,7 +74,7 @@ export default function PopupCard({
                         />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>トップゲームはどれ？</p>
+                        <p>{hover_hint}</p>
                       </TooltipContent>
                     </Tooltip>
                   </CardItem>
@@ -109,10 +115,10 @@ export default function PopupCard({
                 </CardItem>
                 <CardItem translateZ={120}>
                   <h1 className="text-white text-2xl md:text-7xl text-center font-bold drop-shadow-sm cursor-pointer">
-                    {topgame_solds}
+                    {topgame_solds === 0 ? "???" : topgame_solds}
                     <span className="text-neutral-200 text-sm md:text-base text-normal">
                       {" "}
-                      万本
+                      {topgame_solds === 0 ? game_unit : topgame_compact_unit + game_unit}
                     </span>
                   </h1>
                 </CardItem>

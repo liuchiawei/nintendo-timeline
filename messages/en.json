@@ -18,55 +18,73 @@
       "This site introduces how Nintendo's game consoles have evolved and innovated from the first Family Computer to the latest models. It provides detailed information about the features of each console, the stories behind its release, and many popular games.",
       "Nintendo fans and those interested in the history of games will enjoy this site. Please join us in looking back at the history of Nintendo from nostalgic classics to the latest hardware!"
     ],
-    "sales": "Units Sold",
-    "unit": "10k"
+    "sold_title": "Units Sold",
+    "unit": "",
+    "game_unit": "",
+    "hover_hint": "Click to see the most popular game!"
   },
   "Famicom": {
-    "title": "Famicom",
-    "subtitle": "ファミコン",
-    "content": "The Family Computer, known as the 'Famicom', was loved and became a classic 8-bit game console. It became a hit in Japan and was loved by many people.",
-    "topgame": "Super Mario Bros."
+    "title": "NES",
+    "subtitle": "Famicom",
+    "content": "The Nintendo Entertainment System (NES), known as the 'Famicom', was loved and became a classic 8-bit game console. It became a hit in Japan and was loved by many people.",
+    "solds": "61910000",
+    "topgame": "Super Mario Bros.",
+    "topgame_solds": "40240000"
   },
   "SuperFamicom": {
-    "title": "Super Famicom",
-    "subtitle": "スーパーファミコン",
+    "title": "Super Nintendo",
+    "subtitle": "SNES",
     "content": "16-bit evolution, with improved graphics and sound quality. 'Super Mario World' and 'The Legend of Zelda' were revolutionary hits.",
-    "topgame": "Super Mario World"
+    "solds": "49100000",
+    "topgame": "Super Mario World",
+    "topgame_solds": "20610000"
   },
   "Nintendo64": {
     "title": "Nintendo 64",
-    "subtitle": "ニンテンドー64",
+    "subtitle": "N64",
     "content": "64-bit performance, providing the first 3D game experience. 'Super Mario 64' and 'The Legend of Zelda: Ocarina of Time' were revolutionary hits.",
-    "topgame": "Super Mario 64"
+    "solds": "32930000",
+    "topgame": "Super Mario 64",
+    "topgame_solds": "15500000"
   },
   "GameCube": {
-    "title": "GameCube",
-    "subtitle": "ゲームクーバー",
+    "title": "Game Cube",
+    "subtitle": "NGC",
     "content": "A compact design with high performance, featuring an 8cm optical disc. 'Super Smash Bros. DX' became popular.",
-    "topgame": "Super Smash Bros. DX"
+    "solds": "21740000",
+    "topgame": "Super Smash Bros. DX",
+    "topgame_solds": "10000000"
   },
   "Wii": {
-    "title": "ウィィ",
+    "title": "Wii",
     "subtitle": "Wii",
     "content": "Motion control was introduced to achieve a body-sensing game. 'Wii Sports' became a hit as a game that can be enjoyed with family and friends.",
-    "topgame": "Wii Sports"
+    "solds": "101630000",
+    "topgame": "Wii Sports",
+    "topgame_solds": "82860000"
   },
   "WiiU": {
     "title": "Wii U",
-    "subtitle": "ウィィ U",
+    "subtitle": "Wii U",
     "content": "The Wii U GamePad, a tablet-type controller, was adopted, allowing for dual play between the TV and the hand-held screen. It provided a new game experience.",
-    "topgame": "Mario Kart 8"
+    "solds": "13560000",
+    "topgame": "Mario Kart 8",
+    "topgame_solds": "51560000"
   },
   "Switch": {
     "title": "Switch",
-    "subtitle": "スイッチ",
+    "subtitle": "Nintendo Switch",
     "content": "A hybrid game console with a fixed and portable design. Many popular titles such as 'The Legend of Zelda: Breath of the Wild' and 'Splatoon 2' have appeared, and are still loved by many users.",
-    "topgame": "Mario Kart 8 Deluxe"
+    "solds": "100000000",
+    "topgame": "Mario Kart 8 Deluxe",
+    "topgame_solds": "51560000"
   },
   "Switch2": {
     "title": "Switch 2",
-    "subtitle": "スイッチ2",
+    "subtitle": "Nintendo Switch 2",
     "content": "The Nintendo Switch 2, the successor to the Nintendo Switch system, will be released in 2025. The body will be larger than the current model, and the screen size will be expanded. The new Joy-Con will be changed to a type that inserts from the side, and the operability is expected to be improved. Also, the software of the first-generation Switch can be played, and compatibility is ensured.",
-    "topgame": "coming soon"
+    "solds": "0",
+    "topgame": "coming soon",
+    "topgame_solds": "0"
   }
 }

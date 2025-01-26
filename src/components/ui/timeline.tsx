@@ -11,6 +11,7 @@ import {
 import { motion, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { Element, Link } from "react-scroll";
+import { useFormatter } from "next-intl";
 
 interface TimelineEntry {
   time: string;
@@ -18,13 +19,25 @@ interface TimelineEntry {
   title: string;
   subtitle: string;
   url: string;
-  solds: number | string;
+  solds: number;
   topgame: string;
   topgame_url: string | null;
-  topgame_solds: number | string;
+  topgame_solds: number;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({
+  data,
+  sold_title,
+  unit,
+  game_unit,
+  hover_hint,
+}: {
+  data: TimelineEntry[];
+  sold_title: string;
+  unit: string;
+  game_unit: string;
+  hover_hint: string;
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<number>(0);
@@ -67,6 +80,16 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   );
 
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+
+  // 売り上げの単位を変更
+  const format = useFormatter();
+  const compact = (value: number) =>
+    format.number(value, {
+      notation: "compact",
+    });
+  const compactNumber = (value: number) =>
+    Number(parseFloat(compact(value)).toFixed(1));
+  const compactUnit = (value: number) => compact(value).replace(/[0-9.]/g, "");
 
   return (
     <div className="w-full md:px-10" ref={containerRef}>
@@ -126,15 +149,22 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                       subtitle={item.subtitle}
                       topgame={item.topgame}
                       topgame_url={item.topgame_url ?? ""}
-                      topgame_solds={item.topgame_solds}
+                      topgame_solds={compactNumber(item.topgame_solds)}
+                      topgame_compact_unit={compactUnit(item.topgame_solds)}
+                      game_unit={game_unit}
+                      hover_hint={hover_hint}
                     />
-                    <h3 className="text-md md:text-xl text-center">売上台数</h3>
+                    <h3 className="text-md md:text-xl text-center">
+                      {sold_title}
+                    </h3>
                     <div className="flex justify-center items-end gap-2">
                       <AnimatedCounter
-                        value={item.solds}
+                        value={compactNumber(item.solds)}
                         className="text-4xl md:text-8xl font-bold"
                       />
-                      <h3 className="text-md md:text-xl">万台</h3>
+                      <h3 className="text-md md:text-xl">
+                        {compactUnit(item.solds) + unit}
+                      </h3>
                     </div>
                   </div>
                 </div>
