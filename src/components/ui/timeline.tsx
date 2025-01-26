@@ -1,16 +1,16 @@
 "use client";
-import { useScroll, useTransform, motion } from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
-import PopupCard from "@/components/popup_card";
 import AnimatedCounter from "@/components/animated_counter";
+import PopupCard from "@/components/popup_card";
 import StickyComponent from "@/components/sticky_component";
-import { Link, Element } from "react-scroll";
 import {
   Tooltip,
+  TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-  TooltipContent,
 } from "@/components/ui/tooltip";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useEffect, useRef, useState } from "react";
+import { Element, Link } from "react-scroll";
 
 interface TimelineEntry {
   time: string;
