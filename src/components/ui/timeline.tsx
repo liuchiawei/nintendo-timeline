@@ -85,7 +85,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   smooth={true}
                   duration={500}
                   spy={true}
-                  activeClass="scale-120 brightness-50 dark:brightness-200"
+                  activeClass="scale-130 brightness-50 dark:brightness-200"
                   className="ring-3 ring-background size-3 rounded-full bg-neutral-300 dark:bg-neutral-700 hover:bg-neutral-500 dark:hover:bg-neutral-500 transition-all duration-100 transform cursor-pointer"
                 >
                   <TooltipTrigger className="w-full h-full cursor-pointer" />
