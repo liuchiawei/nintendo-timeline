@@ -3,6 +3,7 @@ import { Timeline } from "@/components/ui/timeline";
 import Footer from "@/components/footer";
 import BackToTop from "@/components/back_to_top";
 import { data } from "@/data/data";
+import ScrollDown from "@/components/scroll_down";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         description="The Evolution of Nintendo"
       />
       <div
-        className="max-w-7xl mx-auto py-20 flex flex-col justify-center items-center px-4"
+        className="h-full md:h-screen max-w-7xl mx-auto py-20 flex flex-col justify-center items-center px-4 relative"
       >
         <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-black dark:text-white max-w-4xl">
           任天堂の軌跡
@@ -27,6 +28,7 @@ export default function Home() {
           <br />
           任天堂ファンはもちろん、ゲームの歴史に興味がある方にも楽しんでいただける情報満載のサイトです。ぜひ、懐かしの名機から最新ハードまで、一緒に任天堂の軌跡を振り返ってみませんか？
         </p>
+        <ScrollDown />
       </div>
       <Timeline data={data} />
       <Footer name="HAL東京 リュウチャーウェイ" />
