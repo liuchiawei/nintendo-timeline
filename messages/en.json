@@ -1,0 +1,72 @@
+{
+  "Metadata": {
+    "title": "Nintendo Chronolog",
+    "description": "A Brief History of Nintendo Game Consoles"
+  },
+  "Error": {
+    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
+    "title": "Something went wrong!"
+  },
+  "Home": {
+    "title": "Nintendo",
+    "subtitle": "Chronicle",
+    "description": "A Brief History of Nintendo Game Consoles",
+    "intro_title": "The Evolution of Nintendo",
+    "intro_subtitle": "From 8-bit to Next Generation",
+    "intro_description": [
+      "Nintendo's new Switch 2 will be released in 2025!",
+      "This site introduces how Nintendo's game consoles have evolved and innovated from the first Family Computer to the latest models. It provides detailed information about the features of each console, the stories behind its release, and many popular games.",
+      "Nintendo fans and those interested in the history of games will enjoy this site. Please join us in looking back at the history of Nintendo from nostalgic classics to the latest hardware!"
+    ],
+    "sales": "Units Sold",
+    "unit": "10k"
+  },
+  "Famicom": {
+    "title": "Famicom",
+    "subtitle": "ファミコン",
+    "content": "The Family Computer, known as the 'Famicom', was loved and became a classic 8-bit game console. It became a hit in Japan and was loved by many people.",
+    "topgame": "Super Mario Bros."
+  },
+  "SuperFamicom": {
+    "title": "Super Famicom",
+    "subtitle": "スーパーファミコン",
+    "content": "16-bit evolution, with improved graphics and sound quality. 'Super Mario World' and 'The Legend of Zelda' were revolutionary hits.",
+    "topgame": "Super Mario World"
+  },
+  "Nintendo64": {
+    "title": "Nintendo 64",
+    "subtitle": "ニンテンドー64",
+    "content": "64-bit performance, providing the first 3D game experience. 'Super Mario 64' and 'The Legend of Zelda: Ocarina of Time' were revolutionary hits.",
+    "topgame": "Super Mario 64"
+  },
+  "GameCube": {
+    "title": "GameCube",
+    "subtitle": "ゲームクーバー",
+    "content": "A compact design with high performance, featuring an 8cm optical disc. 'Super Smash Bros. DX' became popular.",
+    "topgame": "Super Smash Bros. DX"
+  },
+  "Wii": {
+    "title": "ウィィ",
+    "subtitle": "Wii",
+    "content": "Motion control was introduced to achieve a body-sensing game. 'Wii Sports' became a hit as a game that can be enjoyed with family and friends.",
+    "topgame": "Wii Sports"
+  },
+  "WiiU": {
+    "title": "Wii U",
+    "subtitle": "ウィィ U",
+    "content": "The Wii U GamePad, a tablet-type controller, was adopted, allowing for dual play between the TV and the hand-held screen. It provided a new game experience.",
+    "topgame": "Mario Kart 8"
+  },
+  "Switch": {
+    "title": "Switch",
+    "subtitle": "スイッチ",
+    "content": "A hybrid game console with a fixed and portable design. Many popular titles such as 'The Legend of Zelda: Breath of the Wild' and 'Splatoon 2' have appeared, and are still loved by many users.",
+    "topgame": "Mario Kart 8 Deluxe"
+  },
+  "Switch2": {
+    "title": "Switch 2",
+    "subtitle": "スイッチ2",
+    "content": "The Nintendo Switch 2, the successor to the Nintendo Switch system, will be released in 2025. The body will be larger than the current model, and the screen size will be expanded. The new Joy-Con will be changed to a type that inserts from the side, and the operability is expected to be improved. Also, the software of the first-generation Switch can be played, and compatibility is ensured.",
+    "topgame": "coming soon"
+  }
+}

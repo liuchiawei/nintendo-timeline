@@ -1,0 +1,68 @@
+{
+  "Metadata": {
+    "title": "任天堂編年史 | Nintendo Chronicle",
+    "description": "任天堂遊戲機的進化史"
+  },
+  "Error": {
+    "description": "<p>我們不幸地遇到了一個錯誤。</p><p>您可以嘗試<retry>重新加載頁面</retry>您正在訪問的頁面。</p>",
+    "title": "發生了一些問題！"
+  },
+  "Home": {
+    "title": "任天堂",
+    "subtitle": "編年史",
+    "description": "The Evolution of Nintendo",
+    "intro_title": "任天堂的軌跡",
+    "intro_subtitle": "8位元到次世代",
+    "intro_description": ["任天堂將在2025年發布Nintendo Switch 2！", "本網站介紹了歷代任天堂遊戲主機，從初代紅白機一直到即將發售的Switch 2，並介紹了每款主機的特點、銷量以及最受歡迎的遊戲。", "歡迎每位任天堂粉絲和對遊戲歷史感興趣的人加入我們，一起回顧任天堂的歷史，從懷舊經典到最新世代！"],
+    "sales": "銷售量",
+    "unit": "萬台"
+  },
+  "Famicom": {
+    "title": "紅白機",
+    "subtitle": "Famicom",
+    "content": "任天堂開發的8位元家用遊戲機。1983年發售，是任天堂歷史上最暢銷的遊戲機之一。",
+    "topgame": "超級瑪利歐兄弟"
+  },
+  "SuperFamicom": {
+    "title": "超級任天堂",
+    "subtitle": "Super Famicom",
+    "content": "任天堂繼紅白機後開發的16位元家用遊戲機。畫質和音質大幅提升。第一次加入了肩部按鍵L/R，並形成了ABXY四個按鍵的手把布局。『超級瑪利歐世界』和『塞爾達傳說』等，多個名作誕生。",
+    "topgame": "超級瑪利歐世界"
+  },
+  "Nintendo64": {
+    "title": "任天堂64",
+    "subtitle": "Nintendo 64",
+    "content": "64ビットの性能で、初の3Dゲーム体験を提供。『スーパーマリオ64』や『ゼルダの伝説 時のオカリナ』など、革新的な名作が生まれました。",
+    "topgame": "スーパーマリオ64"
+  },
+  "GameCube": {
+    "title": "ゲームクーバー",
+    "subtitle": "GameCube",
+    "content": "コンパクトなデザインと高性能を兼ね備え、8cmの光ディスクを採用。『大乱闘スマッシュブラザーズDX』などが人気を博しました",
+    "topgame": "大乱闘スマッシュブラザーズDX"
+  },
+  "Wii": {
+    "title": "Wii",
+    "subtitle": "ウィィ",
+    "content": "モーションコントロールを導入し、体感型ゲームを実現。『Wii Sports』は家族や友人と楽しめるゲームとして大ヒットしました。",
+    "topgame": "Wii Sports"
+  },
+  "WiiU": {
+    "title": "ウィィ U",
+    "subtitle": "Wii U",
+    "content": "タブレット型コントローラー「Wii U GamePad」を採用し、テレビと手元画面のデュアルプレイが可能に。新しいゲーム体験を提供しました。",
+    "topgame": "マリオカート8"
+  },
+  "Switch": {
+    "title": "スイッチ",
+    "subtitle": "Switch",
+    "content": "据え置きと携帯のハイブリッド型ゲーム機。『ゼルダの伝説 ブレス オブ ザ ワイルド』や『スプラトゥーン2』など、多くの人気タイトルが登場し、現在も多くのユーザーに愛されています。",
+    "topgame": "マリオカート8 デラックス"
+  },
+  "Switch2": {
+    "title": "スイッチ2",
+    "subtitle": "Switch 2",
+    "content": "任天堂は2025年に次世代機「Nintendo Switch 2」を発売予定です。 本体は現行モデルよりも大型化し、画面サイズも拡大される見込みです。新しいJoy-Conは横から差し込むタイプに変更され、操作性の向上が期待されています。また、初代Switchのソフトもプレイ可能で、互換性が確保されています。",
+    "topgame": "coming soon"
+  }
+}
